@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="{% static 'imgs/favicon.ico' %}">
+        <title>{% block title %}Тестовое задание{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+        <p><a href="admin" target="_blank">Админка</a></p>
+        <p>
+            <a href="{% url 'sale:api_sales' %}" target="_blank">
+                Step #1 => API objects (get, put, save, delete: DRF)</a>
+        </p>
+        <p><a href="{% url 'sale:api_objects' %}" target="_blank">Step #2 => object list (GetEntities) </a></p>
+        <p>
+            <a href="{% url 'sale:api_results' %}" target="_blank">Step #3 => price difference by date (GetResults)</a>
+        </p>
+        <p><a href="swagger" target="_blank">Тестирование API (Swagger)</a></p>
+        <br>
+        <p><a href="{% url 'sales:objects_list' %}" target="_blank">Список объектов (template)</a></p>
+
+    </body>
+</html>

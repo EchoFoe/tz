@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="{% static 'imgs/favicon.ico' %}">
+        <title>{% block title %}Тестовое задание{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+
+    <body>
+        <h3>ID объекта: {{ obj.get_absolute_url }}</h3>
+        <p>Дата: {{ obj.date }}</p>
+        <p>Цена: {{ obj.price }}</p>
+        <p>Основная цена: {{ obj.prime_price }}</p>
+        <p>Разность цен: {{ obj.diff_price }}</p>
+    </body>
+</html>
